@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login page</title>
+</head>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    body{
+        background:rgb(109, 102, 89);
+    }
+    .login_page{
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        width: 350px;
+        height: 400px;
+        background: rgba(255,255,255,0.397);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: 'Baloo Bhai 2', cursive;
+    }
+    .login_page::before{
+        content:' ';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image:url(background-images-for-login-form-8.jpg);
+        z-index: -1;
+        filter: blur(25px);
+        transition: all .4s;
+    }
+    .login_page:hover::before{
+        transform: scale(1.05);
+    }
+    .login_page .heading{
+        font-size: 3rem;
+        color:white;
+        margin-bottom: 30px;
+    }
+    input{
+        width: 250px;
+        height: 35px;
+        margin:8px 0;
+        font-size: 1.2rem;
+        border: none;
+        background: transparent;
+        outline: none;
+        color: white;
+    }
+    .text{
+        border-bottom: 2px solid rgb(190,190,190);
+    }
+    .btn{
+        background: rgba(255, 255, 255, 0.52);
+        cursor: pointer;
+        transition: all .4s;
+        border-radius: 9px;
+        padding: 6px 14px;
+    }
+    .btn:hover{
+        background: rbga(255,255,255,0.23);
+    }
+</style>
+<body>
+    <div class="login_page">
+        <p class="heading">Login</p>
+        <input type="email" name="" class="text" placeholder="Enter Email" required>
+        <input type="password" name="" class="text" placeholder="Enter Password" required>
+        <input type="submit" value="Login" class="btn">
+    </div>
+    
+</body>
+</html>
